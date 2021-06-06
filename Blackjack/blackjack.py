@@ -1,4 +1,5 @@
 from blackjack_libs import dealer, player, deck, get_score
+from os import system, name
 
 
 '''Blackjack game for coding practice
@@ -9,12 +10,22 @@ from blackjack_libs import dealer, player, deck, get_score
    Requires blackjack_libs
 '''
 
+# Function to clear the screen.
+
+
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
 
 dealer_deck = deck()
 play_again = 'yes'
 
 print("Welcome to BlackJack!")
 while play_again == 'yes':
+    clear()
     # Since blackjack decks are only shuffled back in when they run out, we will reinstantiate the deck class to simulate this effect when there are less than 6 cards left.
     cards_left = dealer_deck.cards_left()
     #print("There are {} cards left in the deck".format(cards_left))
