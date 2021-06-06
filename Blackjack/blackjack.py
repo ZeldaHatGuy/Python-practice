@@ -89,7 +89,7 @@ while play_again == 'yes':
                         break
 
 # Determine winner if there are no busts or blackjack
-    if player_bust == False and dealer_bust == False and not winner:
+    if not player_bust and not dealer_bust and not winner:
         if dealer_score > player_score:
             print("The dealer has {}({}). You have {}. Dealer wins!".format(
                 dealer_score, dealr.hand, player_score))
