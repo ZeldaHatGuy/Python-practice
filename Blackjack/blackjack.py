@@ -31,7 +31,7 @@ while play_again == 'yes':
     #print("There are {} cards left in the deck".format(cards_left))
     if cards_left < 6:
         print("Reshuffling deck")
-    dealer_deck = deck()
+        dealer_deck = deck()
     dealer_card1 = dealer_deck.dealCard()
     dealer_card2 = dealer_deck.dealCard()
     player_card1 = dealer_deck.dealCard()
